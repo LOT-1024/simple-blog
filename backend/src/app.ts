@@ -1,7 +1,9 @@
 import express from "express";
 import cors from "cors";
 import router from "./routes/routes";
+import dotenv from 'dotenv'
 
+dotenv.config()
 const app = express();
 
 // Middleware
@@ -11,6 +13,6 @@ app.use("/uploads", express.static("uploads"));
 
 app.use('', router)
 
-app.listen(3000, () => {
-  console.log("http://localhost:3000/");
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`http://localhost:/${process.env.SERVER_PORT}`);
 });
