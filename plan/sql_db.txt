@@ -1,0 +1,8 @@
+CREATE TABLE blog (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL UNIQUE,
+    image VARCHAR,
+    post TEXT,
+    category VARCHAR,
+    createon TIMESTAMP DEFAULT NOW()
+);

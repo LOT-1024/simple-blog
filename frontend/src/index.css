@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.screen-content{
+    min-height: calc(100vh - 230px);
+}
+
+.ql-container {
+    overflow-y: scroll; 
+  }
+
+@media (min-width: 1280px) and (max-width:1291px){
+    .w-custom{ max-width: 856px !important;}
+}
